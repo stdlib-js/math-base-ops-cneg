@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-ops-cneg",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "description": "Negate a complex number.",
   "license": "Apache-2.0",
   "author": {
