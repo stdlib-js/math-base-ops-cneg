@@ -20,6 +20,8 @@ limitations under the License.
 
 # Negate
 
+[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] [![dependencies][dependencies-image]][dependencies-url]
+
 > Negate a complex number.
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
@@ -166,6 +168,18 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 <!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
 <section class="links">
+
+[npm-image]: http://img.shields.io/npm/v/@stdlib/math-base-ops-cneg.svg
+[npm-url]: https://npmjs.org/package/@stdlib/math-base-ops-cneg
+
+[test-image]: https://github.com/stdlib-js/math-base-ops-cneg/actions/workflows/test.yml/badge.svg
+[test-url]: https://github.com/stdlib-js/math-base-ops-cneg/actions/workflows/test.yml
+
+[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-base-ops-cneg/main.svg
+[coverage-url]: https://codecov.io/github/stdlib-js/math-base-ops-cneg?branch=main
+
+[dependencies-image]: https://img.shields.io/david/stdlib-js/math-base-ops-cneg
+[dependencies-url]: https://david-dm.org/stdlib-js/math-base-ops-cneg/main
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
