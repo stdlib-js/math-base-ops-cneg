@@ -41,6 +41,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import cneg from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-cneg@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-ops-cneg/tags). For example,
+
+```javascript
 import cneg from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-cneg@v0.0.7-esm/index.mjs';
 ```
 
@@ -115,7 +120,7 @@ im = imag( out );
 
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@esm/index.mjs';
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
-import cneg from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-cneg@v0.0.7-esm/index.mjs';
+import cneg from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-cneg@esm/index.mjs';
 
 function randomComplex() {
     var re = discreteUniform( -50, 50 );
