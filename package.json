@@ -44,7 +44,8 @@
     "@stdlib/complex-reim": "^0.0.6",
     "@stdlib/math-base-napi-unary": "^0.0.8",
     "@stdlib/types": "^0.0.14",
-    "@stdlib/utils-library-manifest": "^0.0.8"
+    "@stdlib/utils-library-manifest": "^0.0.8",
+    "@stdlib/error-tools-fmtprodmsg": "^0.0.2"
   },
   "devDependencies": {
     "@stdlib/assert-is-array": "^0.0.7",
