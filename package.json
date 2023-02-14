@@ -47,7 +47,6 @@
     "@stdlib/utils-library-manifest": "^0.0.8"
   },
   "devDependencies": {
-    "@stdlib/assert-is-array": "^0.0.7",
     "@stdlib/assert-is-complex128": "^0.0.7",
     "@stdlib/bench": "^0.0.12",
     "@stdlib/constants-float64-ninf": "^0.0.8",
@@ -56,7 +55,6 @@
     "@stdlib/math-base-assert-is-negative-zero": "^0.0.8",
     "@stdlib/math-base-assert-is-positive-zero": "^0.0.8",
     "@stdlib/random-base-discrete-uniform": "^0.0.6",
-    "@stdlib/random-base-randu": "^0.0.8",
     "@stdlib/random-base-uniform": "^0.0.6",
     "@stdlib/utils-try-require": "^0.0.7",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
