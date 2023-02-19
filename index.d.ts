@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,32 +16,27 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
-var Complex128 = require( '@stdlib/complex-float64' );
-
-
-// MAIN //
+import { Complex128 } from '@stdlib/types/object';
 
 /**
 * Negates a double-precision complex floating-point number.
 *
-* @param {Complex128} z - complex number
-* @returns {Complex128} result
+* @param z - complex number
+* @returns result
 *
 * @example
-* var Complex128 = require( '@stdlib/complex-float64' );
-* var real = require( '@stdlib/complex-real' );
-* var imag = require( '@stdlib/complex-imag' );
+* var Complex128 = require( `@stdlib/complex/float64` );
+* var real = require( `@stdlib/complex/real` );
+* var imag = require( `@stdlib/complex/imag` );
 *
-* var z = new Complex128( -4.2, 5.5 );
+* var z1 = new Complex128( -4.2, 5.5 );
 * // returns <Complex128>
 *
-* var out = cneg( z );
+* var out = cneg( z1 );
 * // returns <Complex128>
 *
 * var re = real( out );
@@ -51,14 +46,14 @@ var Complex128 = require( '@stdlib/complex-float64' );
 * // returns -5.5
 *
 * @example
-* var Complex128 = require( '@stdlib/complex-float64' );
-* var real = require( '@stdlib/complex-real' );
-* var imag = require( '@stdlib/complex-imag' );
+* var Complex128 = require( `@stdlib/complex/float64` );
+* var real = require( `@stdlib/complex/real` );
+* var imag = require( `@stdlib/complex/imag` );
 *
-* var z = new Complex128( 0.0, 0.0 );
+* var z2 = new Complex128( 0.0, 0.0 );
 * // returns <Complex128>
 *
-* var out = cneg( z );
+* var out = cneg( z2 );
 * // returns <Complex128>
 *
 * var re = real( out );
@@ -68,14 +63,14 @@ var Complex128 = require( '@stdlib/complex-float64' );
 * // returns -0.0
 *
 * @example
-* var Complex128 = require( '@stdlib/complex-float64' );
-* var real = require( '@stdlib/complex-real' );
-* var imag = require( '@stdlib/complex-imag' );
+* var Complex128 = require( `@stdlib/complex/float64` );
+* var real = require( `@stdlib/complex/real` );
+* var imag = require( `@stdlib/complex/imag` );
 *
-* var z = new Complex128( NaN, NaN );
+* var z3 = new Complex128( NaN, NaN );
 * // returns <Complex128>
 *
-* var out = cneg( z );
+* var out = cneg( z3 );
 * // returns <Complex128>
 *
 * var re = real( out );
@@ -84,11 +79,9 @@ var Complex128 = require( '@stdlib/complex-float64' );
 * var im = imag( out );
 * // returns NaN
 */
-function cneg( z ) {
-	return new Complex128( -real( z ), -imag( z ) );
-}
+declare function cneg( z: Complex128 ): Complex128;
 
 
 // EXPORTS //
 
-module.exports = cneg;
+export = cneg;
