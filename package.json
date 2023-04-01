@@ -44,7 +44,7 @@
     "@stdlib/complex-imag": "^0.0.7",
     "@stdlib/complex-real": "^0.0.7",
     "@stdlib/complex-reim": "^0.0.6",
-    "@stdlib/math-base-napi-unary": "^0.0.8",
+    "@stdlib/math-base-napi-unary": "^0.0.9",
     "@stdlib/types": "^0.0.14",
     "@stdlib/utils-library-manifest": "^0.0.8"
   },
