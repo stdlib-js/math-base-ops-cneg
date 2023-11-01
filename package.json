@@ -46,7 +46,8 @@
     "@stdlib/complex-reim": "^0.1.1",
     "@stdlib/math-base-napi-unary": "^0.1.1",
     "@stdlib/types": "^0.1.0",
-    "@stdlib/utils-library-manifest": "^0.1.1"
+    "@stdlib/utils-library-manifest": "^0.1.1",
+    "@stdlib/error-tools-fmtprodmsg": "^0.1.1"
   },
   "devDependencies": {
     "@stdlib/assert-is-complex128": "^0.1.1",
