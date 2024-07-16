@@ -45,32 +45,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/math-base-ops-cneg
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var cneg = require( '@stdlib/math-base-ops-cneg' );
+cneg = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-cneg@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var cneg = require( 'path/to/vendor/umd/math-base-ops-cneg/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-cneg@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.cneg;
+})();
+</script>
 ```
 
 #### cneg( z )
@@ -136,10 +142,15 @@ im = imag( out );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
-var cneg = require( '@stdlib/math-base-ops-cneg' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-cneg@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 function randomComplex() {
     var re = discreteUniform( -50, 50 );
@@ -156,6 +167,11 @@ for ( i = 0; i < 100; i++ ) {
     o = cneg( z );
     console.log( 'negate(%s) = %s', z.toString(), o.toString() );
 }
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -164,114 +180,7 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/math/base/ops/cneg.h"
-```
-
-#### stdlib_base_cneg( z )
-
-Negates a double-precision complex floating-point number.
-
-```c
-#include "stdlib/complex/float64/ctor.h"
-#include "stdlib/complex/real.h"
-#include "stdlib/complex/imag.h"
-
-stdlib_complex128_t z = stdlib_complex128( 3.0, -2.0 );
-
-stdlib_complex128_t out = stdlib_base_cneg( z );
-
-double re = stdlib_real( out );
-// returns -3.0
-
-double im = stdlib_imag( out );
-// returns 2.0
-```
-
-The function accepts the following arguments:
-
--   **z**: `[in] stdlib_complex128_t` input value.
-
-```c
-stdlib_complex128_t stdlib_base_cneg( const stdlib_complex128_t z );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/math/base/ops/cneg.h"
-#include "stdlib/complex/float64/ctor.h"
-#include "stdlib/complex/float64/reim.h"
-#include <stdio.h>
-
-int main( void ) {
-    const stdlib_complex128_t x[] = {
-        stdlib_complex128( 3.14, 1.5 ),
-        stdlib_complex128( -3.14, 1.5 ),
-        stdlib_complex128( 0.0, -0.0 ),
-        stdlib_complex128( 0.0/0.0, 0.0/0.0 )
-    };
-
-    stdlib_complex128_t v;
-    stdlib_complex128_t y;
-    double re;
-    double im;
-    int i;
-    for ( i = 0; i < 4; i++ ) {
-        v = x[ i ];
-        stdlib_complex128_reim( v, &re, &im );
-        printf( "z = %lf + %lfi\n", re, im );
-
-        y = stdlib_base_cneg( v );
-        stdlib_complex128_reim( y, &re, &im );
-        printf( "cneg(z) = %lf + %lfi\n", re, im );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -369,7 +278,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/cabs]: https://github.com/stdlib-js/math-base-special-cabs
+[@stdlib/math/base/special/cabs]: https://github.com/stdlib-js/math-base-special-cabs/tree/umd
 
 <!-- </related-links> -->
 
