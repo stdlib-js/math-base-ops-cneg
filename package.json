@@ -46,7 +46,8 @@
     "@stdlib/complex-float64-reim": "^0.1.2",
     "@stdlib/math-base-napi-unary": "^0.2.3",
     "@stdlib/types": "^0.4.3",
-    "@stdlib/utils-library-manifest": "^0.2.2"
+    "@stdlib/utils-library-manifest": "^0.2.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/assert-is-complex128": "^0.2.2",
